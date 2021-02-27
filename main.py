@@ -40,7 +40,6 @@ async def give(ctx, *, arg):
 async def give(ctx, *, arg):
      await ctx.send('please wait our quantum hamsters are searching for ya')
      username_search(arg)
-     await asyncio.sleep(90)
      await ctx.send(ctx.message.author.mention + ' we found these: ' + username_search.Str)
 
     
