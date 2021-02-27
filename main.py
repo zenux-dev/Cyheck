@@ -10,6 +10,7 @@ import os
 Token = os.getenv("DISCORD_BOT_TOKEN")
 client = commands.Bot(command_prefix='-')
 ipgeo_api = os.getenv("ipgeo")
+shodan_api = os.getenv("shodan")
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game('-help'))
@@ -25,12 +26,12 @@ async def give(ctx, *, arg):
     check(arg)
     if check.breached or check.breached2:
        await ctx.send('Email:' + arg + 'was breached')
-    else:
-        await ctx.send('Email:' + arg + ' wasnt breached')
+    elif not check.breached or check.breached2:
+       await ctx.send('Email:' + arg + ' wasnt breached')
 
 @client.command(name='ipv', help='check if an ip got any vulnerablities')
 async def give(ctx, *, arg):
-    ip_check(arg)
+    ip_check(arg, shodan_api)
     if ip_check.vuln:
        await ctx.send('IP: ' + arg + ' is vulnerable')
     elif not ip_check.vuln:
