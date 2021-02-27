@@ -1,4 +1,5 @@
 import shodan
+import os
 
 word = 'vulns'
 api = os.getenv("shodan")
