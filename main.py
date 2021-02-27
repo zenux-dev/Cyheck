@@ -17,7 +17,7 @@ async def on_ready():
 
 @client.command(name='ipg', help='tells you the location of an ip')
 async def give(ctx, *, arg):
-    get_location(ipgei_api, arg)
+    get_location(ipgeo_api, arg)
     await ctx.send(get_location.response)
 
 @client.command(name='breached', help='tells you if an email has been breached or not')
