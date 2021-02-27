@@ -9,7 +9,7 @@ import os
 
 Token = os.getenv("DISCORD_BOT_TOKEN")
 client = commands.Bot(command_prefix='-')
-
+ipgeo_api = os.getenv("ipgeo")
 @client.event
 async def on_ready():
     await client.change_presence(activity=discord.Game('-help'))
@@ -17,7 +17,7 @@ async def on_ready():
 
 @client.command(name='ipg', help='tells you the location of an ip')
 async def give(ctx, *, arg):
-    get_location('77a3322e5bc2467faf675c567f3a150c', arg)
+    get_location(ipgei_api, arg)
     await ctx.send(get_location.response)
 
 @client.command(name='breached', help='tells you if an email has been breached or not')
