@@ -12,6 +12,7 @@ client = commands.Bot(command_prefix='-')
 
 @client.event
 async def on_ready():
+    await client.change_presence(activity=discord.Game('-help'))
     print(f'{client.user} has connected to Discord!')
 
 @client.command(name='ipg', help='tells you the location of an ip')
