@@ -205,4 +205,4 @@ def username_search(username):
 
 
 
-        username_search.Str = ' '.join([str(elem) for elem in username_search.users])
+        username_search.Stri = ' '.join([str(elem) for elem in username_search.users])
