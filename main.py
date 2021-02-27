@@ -43,5 +43,13 @@ async def give(ctx, *, arg):
      time.sleep(90)
      await ctx.send(ctx.message.author.mention + ' we found these: ' + username_search.Str)
 
-
+    
+@client.command(name='ping', help='shows the bots ping')
+async def ping(ctx):
+    await ctx.send(f'My ping is {bot.latency}!')
+    
+@client.command(name='invite', help='invite me!!')
+async def give(ctx):
+    await ctx.send(ctx.message.author.mention + ' https://discord.com/api/oauth2/authorize?client_id=815158077597679616&permissions=2147555392&scope=bot')
+    
 client.run(Token)
