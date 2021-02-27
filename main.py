@@ -45,7 +45,7 @@ async def give(ctx, *, arg):
 
     
 @client.command(name='ping', help='shows the bots ping')
-async def ping(ctx):
+async def give(ctx):
     await ctx.send(f'My ping is {bot.latency}!')
     
 @client.command(name='invite', help='invite me!!')
