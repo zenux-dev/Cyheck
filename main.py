@@ -5,8 +5,9 @@ from username_search import *
 import discord
 from discord.ext import commands
 import time
+import os
 
-Token = process.env.TOKEN
+Token = os.getenv("DISCORD_BOT_TOKEN")
 client = commands.Bot(command_prefix='-')
 
 @client.event
