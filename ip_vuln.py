@@ -1,9 +1,9 @@
 import shodan
 
 word = 'vulns'
-
+api = os.getenv("shodan")
 def ip_check(ip):
-        api = shodan.Shodan('ZJUHwZkpzTKxZdzcRQ6RYpGEQF4LlPUt')
+        api = shodan.Shodan(api)
 
         ip_check.info = api.host(ip)
 
