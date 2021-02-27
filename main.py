@@ -25,7 +25,7 @@ async def give(ctx, *, arg):
 async def give(ctx, *, arg):
     check(arg)
     if check.breached or check.breached2:
-       await ctx.send('Email:' + arg + 'was breached')
+       await ctx.send('Email:' + arg + ' was breached')
     elif not check.breached or check.breached2:
        await ctx.send('Email:' + arg + ' wasnt breached')
 
