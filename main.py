@@ -61,7 +61,7 @@ async def give(ctx, *, arg):
     await ctx.send('The encode string of ' + arg + ' is:' + encode_base64.result)
 
 @client.command(name='price', help='Gets the price if a crypto currency')
-async def give(ctx, *, arg, *, arg2):
+async def give(ctx, arg, arg2):
     get_price(arg, arg2)
     e = get_prices.result.replace("(", "")
     x = e.replace(")", "")
