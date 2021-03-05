@@ -63,7 +63,8 @@ async def give(ctx, *, arg):
 @client.command(name='price', help='Gets the price if a crypto currency')
 async def give(ctx, arg, arg2):
     get_price(arg, arg2)
-    result = get_price.result
+    b = get_price.result
+    result = str(b)
     await ctx.send('The price of ' + arg + ' in ' + arg2 + " is " + result)
     
 @client.command(name='ping', help='shows the bots ping')
