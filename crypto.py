@@ -2,7 +2,8 @@ import hashlib
 import base64
 
 def encrypt_md5(word):
-  encrypt_md5.md5 = hashlib.md5(word.encode())
+  lol = hashlib.md5(word.encode())
+  encrypt_md5.md5 = lol.hexdigest()
   
 
 def encode_base64(word):
