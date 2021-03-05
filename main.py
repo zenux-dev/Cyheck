@@ -4,6 +4,7 @@ from ip_vuln import *
 from username_search import *
 import discord
 from discord.ext import commands
+from crypto import *
 import time
 import os
 
@@ -43,7 +44,21 @@ async def give(ctx, *, arg):
      username_search(arg)
      await ctx.send(ctx.message.author.mention + ' we found these: ' + username_search.Str)
 
+@client.command(name='MD5', help='Hashes a string in md5')
+async def give(ctx, *, arg):
+    encrypt_md5(arg)
+    await ctx.send('The hash for ' + arg + ' is:' + encrypt_md5.md5)
     
+@client.command(name='bdecode', help='Decodes a Base64 encoded string')
+async def give(ctx, *, arg):
+    decode_base64(arg)
+    await ctx.send('The string for ' + arg + ' is:' + decode_base64.result)
+    
+@client.command(name='bencode', help='Base64 Encodes a string')
+async def give(ctx, *, arg):
+    encode_base64(arg)
+    await ctx.send('The encode string of ' + arg + ' is:' + encode_base64.result)
+
 @client.command(name='ping', help='shows the bots ping')
 async def give(ctx):
     await ctx.send('My ping is ' + client.latency + '!')
