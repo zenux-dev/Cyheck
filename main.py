@@ -5,6 +5,7 @@ from username_search import *
 import discord
 from discord.ext import commands
 from crypto import *
+from prices import *
 import time
 import os
 
@@ -59,6 +60,15 @@ async def give(ctx, *, arg):
     encode_base64(arg)
     await ctx.send('The encode string of ' + arg + ' is:' + encode_base64.result)
 
+@client.command(name='price', help='Gets the price if a crypto currency')
+async def give(ctx, *, arg, *, arg2):
+    get_price(arg, arg2)
+    e = get_prices.result.replace("(", "")
+    x = e.replace(")", "")
+    y = x.split(", ", 1)
+    result = y[0]
+    await ctx.send('The price of ' + arg + ' in ' + arg2 + " is " + result)
+    
 @client.command(name='ping', help='shows the bots ping')
 async def give(ctx):
     await ctx.send('My ping is ' + client.latency + '!')
