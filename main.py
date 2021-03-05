@@ -63,7 +63,7 @@ async def give(ctx, *, arg):
 @client.command(name='price', help='Gets the price if a crypto currency')
 async def give(ctx, arg, arg2):
     get_price(arg, arg2)
-    e = get_prices.result.replace("(", "")
+    e = get_price.result.replace("(", "")
     x = e.replace(")", "")
     y = x.split(", ", 1)
     result = y[0]
