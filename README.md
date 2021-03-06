@@ -12,14 +12,16 @@ please if you want to self host the bot put the link of this repository here
       1- Open heroku and create a new project
       2- and connect it to the forked repo
       3- open settings and chose python as a BuildPack
-      ![alt text](https://cdn.discordapp.com/attachments/817481078083944469/817684093235363850/unknown.png)
+   ![alt text](https://cdn.discordapp.com/attachments/817481078083944469/817684093235363850/unknown.png)
+   
       4- hit reveal config vars and add
              1- DISCORD_BOT_TOKEN you discord bot token
              2- ipgeo your ip geolocation api key
              3- shodan your shodan api key
       5- then go back to deploy and hit the deploy button
       6- once its done deploying go to the resources tab youl find a worker resource click on the pen and enable it
-      ![alt text](https://cdn.discordapp.com/attachments/817481078083944469/817684047018590218/unknown.png)
+   ![alt text](https://cdn.discordapp.com/attachments/817481078083944469/817684047018590218/unknown.png)
+   
       7- your but will be ready enjoy it
       
      
