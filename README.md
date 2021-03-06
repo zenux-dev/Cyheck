@@ -5,7 +5,7 @@
 ![Forks](https://img.shields.io/github/forks/zenux-dev/Cyheck)
 
 ### Cyheck
-A cyber security bot made from scratch by me
+A cyber security discord bot made from scratch by me
 please if you want to self host the bot put the link of this repository here
 
 Invite me:https://discord.com/api/oauth2/authorize?client_id=815158077597679616&permissions=2147555392&scope=bot
