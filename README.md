@@ -8,6 +8,8 @@
 A cyber security bot made from scratch by me
 please if you want to self host the bot put the link of this repository here
 
+Invite me:https://discord.com/api/oauth2/authorize?client_id=815158077597679616&permissions=2147555392&scope=bot
+
 ## How to set up
       1- Open heroku and create a new project
       2- and connect it to the forked repo
