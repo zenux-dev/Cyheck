@@ -22,7 +22,7 @@ please if you want to self host the bot put the link of this repository here
       6- once its done deploying go to the resources tab youl find a worker resource click on the pen and enable it
    ![alt text](https://cdn.discordapp.com/attachments/817481078083944469/817684047018590218/unknown.png)
    
-      7- your but will be ready enjoy it
+      7- your bot is ready enjoy it
       
      
 ### Buy Me A Juice
