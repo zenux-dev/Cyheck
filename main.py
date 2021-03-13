@@ -69,6 +69,15 @@ async def give(ctx, *, arg):
         await ctx.send("Proxy: " + arg + " is dead")
     else:
         await ctx.send("Proxy: " + arg + "is alive and here is the data we found: " + r)
+        
+@client.command(name='token', help='checks if a discord account token is valid or not')
+async def give(ctx, *, arg):
+    check_token(arg)
+    if check_token.result == 200:
+        await ctx.send("Token: " + arg + " is working")
+    else:
+        await ctx.send("Token: " + arg + " is not working")       
+ 
 
 @client.command(name='price', help='Gets the price if a crypto currency')
 async def give(ctx, arg, arg2):
