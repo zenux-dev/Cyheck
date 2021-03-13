@@ -64,10 +64,11 @@ async def give(ctx, *, arg):
 @client.command(name='proxy', help='check if a proxy is alive or not and retrives its data')
 async def give(ctx, *, arg):
     check_proxy(arg)
+    r = str(check_proxy.r)
     if check_proxy.r == False:
-        await ctx.send("Proxy: " + arg + "is dead")
+        await ctx.send("Proxy: " + arg + " is dead")
     else:
-        await ctx.send("Proxy: " + arg + "is alive and here is the data we found: " + check_proxy.r)
+        await ctx.send("Proxy: " + arg + "is alive and here is the data we found: " + r)
 
 @client.command(name='price', help='Gets the price if a crypto currency')
 async def give(ctx, arg, arg2):
