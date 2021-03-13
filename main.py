@@ -64,7 +64,7 @@ async def give(ctx, *, arg):
 @client.command(name='proxy', help='check if a proxy is alive or not and retrives its data')
 async def give(ctx, *, arg):
     check_proxy(arg)
-    if check_proxy.r == False
+    if check_proxy.r == False:
         await ctx.send("Proxy: " + arg + "is dead")
     else:
         await ctx.send("Proxy: " + arg + "is alive and here is the data we found: " + check_proxy.r)
