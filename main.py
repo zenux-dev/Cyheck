@@ -2,6 +2,7 @@ from breached import *
 from ip_geolocation import *
 from ip_vuln import *
 from username_search import *
+from proxy import *
 import discord
 from discord.ext import commands
 from crypto import *
@@ -59,6 +60,14 @@ async def give(ctx, *, arg):
 async def give(ctx, *, arg):
     encode_base64(arg)
     await ctx.send('The encode string of ' + arg + ' is:' + encode_base64.result)
+    
+@client.command(name='proxy', help='check if a proxy is alive or not and retrives its data')
+async def give(ctx, *, arg):
+    check_proxy(arg)
+    if check_proxy.r == False
+        await ctx.send("Proxy: " + arg + "is dead")
+    else:
+        await ctx.send("Proxy: " + arg + "is alive and here is the data we found: " + check_proxy.r)
 
 @client.command(name='price', help='Gets the price if a crypto currency')
 async def give(ctx, arg, arg2):
